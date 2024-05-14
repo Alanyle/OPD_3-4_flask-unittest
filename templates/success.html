@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ваша анкета принята!</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+    background-color: #000000;
+    color: white;
+    font-size: 50px;
+    /* Установка линейного градиента */
+    background-image: linear-gradient(to bottom right, #070b1a, #040614);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    h2 {
+    font-size: 70px;
+    }
+    img {
+    display: block;
+    margin: auto;
+    width: 50%;
+    max-width: 60%;
+    }
+    </style>
+</head>
+<body>
+    <div style="width: 60%; margin: auto; margin-top: 100px;">
+        <h2>Спасибо, {{ name }}, ваша анкета успешно отправлена!</h2>
+        <img src="{{ url_for('static', filename='success.gif') }}" alt="Success Image">
+    </div>
+</body>
+</html>
