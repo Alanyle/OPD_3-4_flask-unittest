@@ -27,9 +27,9 @@
         <h2>Анкета пользователя</h2>
         <form method="post">
             {{ form.csrf_token }}
-            {{ form.name.label }} {{ form.name }}<br><br>
-            {{ form.age.label }} {{ form.age }}<br><br>
-            {{ form.email.label }} {{ form.email }}<br>
+            {{ form.name.label }} <input type="text" name="name" style="background-color: #0a0a0a; color: white;"><br><br>
+            {{ form.age.label }} <input type="number" name="age" style="background-color: #0a0a0a; color: white;"><br><br>
+            {{ form.email.label }} <input type="email" name="email" style="background-color: #0a0a0a; color: white;"><br>
             {% if form.email.errors %}
                 <ul class="errors">
                     {% for error in form.email.errors %}
@@ -38,7 +38,7 @@
                 </ul>
             {% endif %}
             <br>
-            {{ form.submit }}
+            <button type="submit" style="background-color: #0a0a0a; color: white;">Отправить</button>
         </form>
     </div>
 </body>
